@@ -32,7 +32,7 @@ function App() {
         <div className='flex gap-x-4 items-center'>
           <img src={brand} width="30px" className={`cursor-pointer duration-500 ${!nav && "rotate-[360deg]"}`} alt="Logo" />
           <h1 className={`text-white cursor-pointer origin-left font-medium text-xl duration-300 ${!nav && "scale-0"}`}>
-            Brand.
+            ReactJs.
           </h1>
         </div>
 
