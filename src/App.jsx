@@ -20,7 +20,7 @@ function App() {
     <div className='flex'>
       <div className={`${nav ? 'w-72' : 'w-20'
         } h-screen   duration-300 p-5 pt-5 bg-indigo-900 relative`}>
-        <img src={control} alt="/" className={
+        <img src={control} alt="menu-icon" className={
           `absolute 
           cursor-pointer 
           rounded-full 
@@ -30,7 +30,7 @@ function App() {
           onClick={() => setNav(!nav)} />
 
         <div className='flex gap-x-4 items-center'>
-          <img src={brand} width="30px" className={`cursor-pointer duration-500 ${!nav && "rotate-[360deg]"}`} />
+          <img src={brand} width="30px" className={`cursor-pointer duration-500 ${!nav && "rotate-[360deg]"}`} alt="Logo" />
           <h1 className={`text-white cursor-pointer origin-left font-medium text-xl duration-300 ${!nav && "scale-0"}`}>
             Brand.
           </h1>
@@ -40,7 +40,7 @@ function App() {
           {Menus.map((menu, index) => (
             <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer
             p-2 hover:bg-indigo-700 rounded-md ${menu.gap ? "mt-9" : "mt-2"}`}>
-              <img src={menu.src} />
+              <img src={menu.src} alt={menu.title} />
               <span className={`${!nav && 'hidden'} origin-left duration-200`}>{menu.title}</span>
             </li>
           ))}
